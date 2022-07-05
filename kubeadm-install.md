@@ -220,7 +220,8 @@ kubectl apply -f "https://cloud.weave.works/k8s/net?k8s-version=$(kubectl versio
 kubectl get pods -A
 ```
 
-
+## test
 ```
 kubectl run nginx --image=nginx:stable
+kubectl create deploy nginx --image=nginx:stable
 ```
