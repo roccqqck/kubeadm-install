@@ -7,7 +7,11 @@ vagrant up
 
 ```
 vagrant ssh kubemaster
+```
+```
 vagrant ssh kubenode01
+```
+```
 vagrant ssh kubenode02
 ```
 
@@ -20,8 +24,11 @@ sudo vim /etc/fstab
 # /swapfile ... ...
 ```
 
-
-
+## stop ufw or firewalld
+```
+sudo systemctl disable ufw
+sudo systemctl stop ufw
+```
 ```
 sudo apt update
 sudo apt upgrade
@@ -99,7 +106,7 @@ echo "deb [signed-by=/usr/share/keyrings/kubernetes-archive-keyring.gpg] https:/
 Update apt package index, install kubelet, kubeadm and kubectl, and pin their version:
 ```
 sudo apt-get update
-sudo apt-get install -y kubelet=1.23.6-00 kubeadm=1.23.6-00 kubectl=1.23.6-00
+sudo apt-get install -y kubelet=1.23.9-00 kubeadm=1.23.9-00 kubectl=1.23.9-00
 sudo apt-mark hold kubelet kubeadm kubectl
 ```
 
